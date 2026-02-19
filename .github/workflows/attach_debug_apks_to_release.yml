@@ -16,6 +16,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Install hub
+        run: sudo apt install hub -y
+  
       - name: Clone repository
         uses: actions/checkout@v6
         with:
